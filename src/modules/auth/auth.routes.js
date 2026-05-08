@@ -11,7 +11,7 @@ const authMiddleware = require('../../middleware/auth.middleware');
 
 router.post('/login', controller.login);
 router.post('/register', controller.register);
-router.get('/users', authMiddleware, controller.getUsers);
+router.post('/verify', authMiddleware, controller.authVerify);
 
 // router.get('/logout', logout);
 

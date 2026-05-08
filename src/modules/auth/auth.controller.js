@@ -30,9 +30,10 @@ exports.register = async (req, res) => {
   }
 }
 
-exports.getUsers = async (req, res) => {
-  const data = [{'name' : 'John'}, {'name' : 'Doe'}];
-  res.json(data);
+exports.authVerify = async (req, res) => {
+  res.status(200).json({
+    message: 'Authenticated'
+  });
 };
 
 // exports.logout = async (req, res) => {
